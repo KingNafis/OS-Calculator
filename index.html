@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operating System Algorithm Calculator</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2>Operating System Algorithm Calculator</h2>
+
+      <div>
+        <label for="algorithm">Algorithm:</label>
+        <select id="algorithm">
+          <option value="FCFS">FCFS</option>
+          <option value="SJFNonPreemptive">SJF (Non-Preemptive)</option>
+          <option value="SJFPreemptive">SJF (Preemptive)</option>
+          <option value="RR">RR</option>
+          <option value="PriorityNonPreemptive">Priority (Non-Preemptive)</option>
+          <option value="PriorityPreemptive">Priority (Preemptive)</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="arrival">Arrival Times (comma-separated):</label>
+        <input type="text" id="arrival" placeholder="e.g., 0, 2, 4" />
+      </div>
+
+      <div>
+        <label for="burst">Burst Times (comma-separated):</label>
+        <input type="text" id="burst" placeholder="e.g., 5, 3, 2" />
+      </div>
+
+      <div id="priorities-container" style="display: none">
+        <label for="priorities">Priorities (comma-separated):</label>
+        <input type="text" id="priorities" placeholder="e.g., 1, 4, 2" />
+      </div>
+
+      <div id="quantum-container" style="display: none">
+        <label for="quantum">Quantum Time:</label>
+        <input type="number" id="quantum" placeholder="Enter quantum time" />
+      </div>
+
+      <button id="solve">Solve</button>
+
+      <h3>Result</h3>
+      <pre id="output"></pre>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
